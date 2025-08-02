@@ -23,5 +23,13 @@
 # `config` command for managing dotfiles following https://www.atlassian.com/git/tutorials/dotfiles
 alias config='/usr/bin/git --git-dir=/Users/thecharlieblake/.cfg/ --work-tree=/Users/thecharlieblake'
 
-# on install oh-my-zsh creates a huge set of .zshrc options - moved these to ~/.oh-my-zshrc
+# These aliases are not provided by default. I'm a little reluctant to add them but the
+# autoswitch_virtualenv plugin complains if it can't find python.
+alias python=python3
+alias pip=pip3
+
+# On install oh-my-zsh creates a huge set of .zshrc options - moved these to ~/.oh-my-zshrc
 source ~/.oh-my-zshrc
+
+# Sets up the starship prompt
+eval "$(starship init zsh)"
