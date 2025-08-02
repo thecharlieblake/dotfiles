@@ -1,0 +1,46 @@
+format = """
+[](#9A348E)\
+$python\
+[](fg:#9A348E bg:#FCA17D)\
+$git_branch\
+$git_state\
+[](fg:#FCA17D bg:#86BBD8)\
+$directory\
+[](fg:#86BBD8 bg:#06969A)\
+[](fg:#06969A bg:#33658A)\
+$time\
+[](fg:#33658A)\
+\n\
+[\\$](bold fg:#1e8fd0) \
+"""
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+[python]
+symbol = ""
+style = "bg:#9A348E"
+format = '[[ $symbol ($virtualenv) ](bg:#9A348E)]($style)'
+
+[git_branch]
+disabled = true
+symbol = ""
+style = "bg:#FCA17D"
+format = '[ $symbol $branch ]($style)'
+
+[git_state]
+disabled = false
+style = "bg:#FCA17D"
+format = '[  \[$state( $progress_current/$progress_total)\]]($style)'
+
+[directory]
+style = "bg:#86BBD8"
+format = "[ $path ]($style)"
+truncation_length = 2
+truncation_symbol = "…/"
+
+[time]
+disabled = false
+time_format = "%T" # Hour:Minute:Second Format
+style = "bg:#33658A"
+format = '[ $time ]($style)'

@@ -19,3 +19,6 @@
 ###                                                                          ###
 ### Rule of thumb: minimal in env, heavy in profile, UI in rc.               ###
 ################################################################################
+
+# Adds cabal to PATH
+export PATH="$HOME/.ghcup/bin:$PATH"
